@@ -7,8 +7,15 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item >  
+    <ion-label float>Height (M)</ion-label>
+    <ion-input [(ngModel)]="height"></ion-input>
+  </ion-item >
+    <ion-item >
+      <ion-label float>Weight (KG)</ion-label>
+      <ion-input [(ngModel)]="weight"></ion-input>
+    </ion-item >
+  <button ion-button color="secondary" (click)="CalculateBMI()">Calculate BMI</button>
+  <h1>Your BMI: {{ bmiValue }} </h1>
+
 </ion-content>
